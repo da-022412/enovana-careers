@@ -6,7 +6,7 @@
 .careers-blurbs-container {
     display: grid;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .careers-blurb {
@@ -16,13 +16,13 @@
 
 .careers-blurb-img {
     flex: 0 0 60px;
+    padding: 16px;
     text-align: center;
 }
 
 .careers-blurb-img img {
     background-color: #477105;
     border-radius: 50%;
-    max-height: 40px;
     padding: 16px;
 }
 
@@ -32,7 +32,7 @@
 
 .careers-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .careers-grid-item {
@@ -61,4 +61,44 @@
     padding: 1rem;
     text-align: center;
     width: 100%;
+}
+
+.leadership-section {
+    background-color: #e0828b;
+    padding: 80px;
+}
+
+.leadership-section-container {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.leadership-section-desc,
+.leadership-section-img-container {
+    flex: 0 0 50%;
+}
+
+.leadership-section-heading {
+    font-size: clamp(2rem, calc(50% + 1vw), 2.5rem);
+    text-align: center;
+    width: 100%;
+}
+
+.leadership-section-list {
+    display: table;
+    margin: auto;
+}
+
+.leadership-section-img img {
+    max-width: 100%;
+}
+
+.leadership-section-img-caption {
+    display: block;
+    text-align: center;
+}
+
+@media(max-width:980px){
+
 }

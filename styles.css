@@ -15,15 +15,16 @@
 }
 
 .careers-blurb-img {
-    flex: 0 0 60px;
-    padding: 16px;
-    text-align: center;
-}
-
-.careers-blurb-img img {
+    align-items: center;
     background-color: #477105;
     border-radius: 50%;
+    display: flex;
+    flex: 0 0 60px;
+    height: 60px;
+    justify-content: center;
     padding: 16px;
+    text-align: center;
+    width: 60px;
 }
 
 .careers-grid {
@@ -51,8 +52,9 @@
 .careers-grid-img img {
     display: block;
     height: 400px;
+    max-width: 100%;
     object-fit: cover;
-    width: 100%;
+    width: 800px;
 }
 
 .careers-grid-desc {
@@ -100,5 +102,39 @@
 }
 
 @media(max-width:980px){
+    .careers-grid-container {
+        grid-template-columns: 1fr;
+    }
 
+    .careers-grid-item {
+        flex-direction: row;
+    }
+
+    .careers-grid-item:nth-child(2),
+    .careers-grid-item:last-child {
+        flex-direction: row-reverse;
+    }
+
+    .leadership-section {
+        padding: 32px;
+    }
+
+    .leadership-section-container {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:767px){
+    .careers-grid-item {
+        flex-direction: column;
+    }
+
+    .careers-grid-item:nth-child(2),
+    .careers-grid-item:last-child {
+        flex-direction: column;
+    }
+
+    .careers-blurbs-container {
+        grid-template-columns: 1fr;
+    }
 }
